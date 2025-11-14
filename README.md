@@ -1,70 +1,196 @@
-# Getting Started with Create React App
+# React E-Commerce CRUD Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Internship Technical Test – React Frontend Developer
 
-## Available Scripts
+This project is a fully functional, responsive e-commerce CRUD (Create,
+Read, Update, Delete) application built using **React.js**. It was
+developed as part of the **React Frontend Developer Internship Technical
+Test**.
 
-In the project directory, you can run:
+All product data is fetched from the **Fake Store API**, and CRUD
+operations are maintained in the **client-side state** as required.
 
-### `npm start`
+------------------------------------------------------------------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features (CRUD)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ✔ READ
 
-### `npm test`
+-   Fetches product data from **Fake Store API**
+    (`https://fakestoreapi.com/`).
+-   Displays all products on the home page.
+-   Each product card shows:
+    -   Image
+    -   Title
+    -   Price
+-   Clicking a product opens a **Product Details** page using dynamic
+    routing (`/product/:id`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+------------------------------------------------------------------------
 
-### `npm run build`
+### ✔ CREATE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Includes an **Add Product** page with a full form:
+    -   Title
+    -   Description
+    -   Price
+    -   Category
+    -   Image URL
+-   Client-side validation:
+    -   Required fields cannot be empty.
+    -   Price must be a valid number.
+-   On submit, the product is added to the **React state** and displayed
+    in the product list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+------------------------------------------------------------------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✔ UPDATE
 
-### `npm run eject`
+-   Product Details page contains an **Edit Product** button.
+-   Opens an update form with all fields pre-filled.
+-   User can update any field.
+-   Changes instantly reflect in:
+    -   Product list
+    -   Product details page
+-   Changes are maintained in client-side React state.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+------------------------------------------------------------------------
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ✔ DELETE
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   Product Details page includes a **Delete** button.
+-   On delete:
+    -   Product is removed from the React state.
+    -   User is redirected back to the Home page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+------------------------------------------------------------------------
 
-## Learn More
+## 🧱 Technical Implementation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ⚛ React Features Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Functional Components  
+-   React Hooks:
+    -   `useState`
+    -   `useEffect`
+    -   `useContext`
+-   React Router:
+    -   Dynamic routes for `ProductDetails`
+    -   Routes for Add / Edit pages
 
-### Code Splitting
+### 📦 Component Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    src/
+     ├── Components/
+     │    ├── ProductCard.jsx
+     │    ├── Navbar.jsx
+     │    └── Loader.jsx
+     ├── Pages/
+     │    ├── Home.jsx
+     │    ├── ProductDetails.jsx
+     │    ├── AddProduct.jsx
+     │    └── EditProduct.jsx
+     ├── Context/
+     │    └── ProductContext.jsx
+     ├── App.js
+     └── index.js
 
-### Analyzing the Bundle Size
+### 🧹 Clean Code Practices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-   Clear component separation  
+-   Meaningful variable & function names  
+-   Reusable components  
+-   Well-organized folder structure  
+-   Comments added where necessary
 
-### Making a Progressive Web App
+------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎨 UI & User Experience
 
-### Advanced Configuration
+### ✔ Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application is fully responsive for: - Desktop  
+- Tablet  
+- Mobile
 
-### Deployment
+------------------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### ✔ Form Validation
 
-### `npm run build` fails to minify
+Implemented for Create and Update: - Required fields validation -
+Numeric validation for price - Real-time error messages near inputs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------------------------------------------------------------------------
+
+### ✔ Loading & Error Handling
+
+-   Shows **Loading…** while API fetch occurs  
+-   If API fails, shows a friendly error message  
+-   Error boundaries for missing product ID or invalid routes
+
+------------------------------------------------------------------------
+
+## 📦 Installation & Running the Project
+
+### 1️⃣ Clone the repository
+
+``` sh
+git clone https://github.com/Vighnesh54/ecommerce-.git
+```
+
+### 2️⃣ Move into project folder
+
+``` sh
+cd frontend
+```
+
+### 3️⃣ Install dependencies
+
+``` sh
+npm install
+```
+
+### 4️⃣ Run the development server
+
+``` sh
+npm start
+```
+
+The project will open at:
+
+    http://localhost:3000
+
+------------------------------------------------------------------------
+
+## 🧪 API Used
+
+All data is fetched from:
+
+https://fakestoreapi.com/
+
+No product data is hardcoded.
+
+------------------------------------------------------------------------
+
+## 💡 Technical & Design Decisions
+
+-   Used **Fake Store API** to simulate real e-commerce backend.
+-   Stored CRUD output in **React state**, as API does not save
+    mutations.
+-   Used **Context API** for global product state management.
+-   Used **React Router** for clean navigation & REST-like URLs.
+-   Chose a clean and minimal UI to fulfill the aesthetic requirements.
+-   Ensured responsive design to satisfy test expectations.
+-   Added form validation for better UX.
+
+------------------------------------------------------------------------
+
+## 📤 Submission Requirements (Fulfilled)
+
+-   Public GitHub repository ✔  
+-   Clean commit history ✔  
+-   Fully working CRUD app ✔  
+-   Responsive UI ✔  
+-   Error & loading handling ✔  
+-   README documentation ✔
+
