@@ -126,7 +126,7 @@ git clone https://github.com/Vighnesh54/ecommerce-.git
 ### 2️⃣ Move into project folder
 
 ``` sh
-cd frontend
+cd ecommerce-
 ```
 
 ### 3️⃣ Install dependencies
