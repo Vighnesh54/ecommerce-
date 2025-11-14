@@ -78,22 +78,7 @@ operations are maintained in the **client-side state** as required.
     -   Dynamic routes for `ProductDetails`
     -   Routes for Add / Edit pages
 
-### 📦 Component Structure
 
-    src/
-     ├── Components/
-     │    ├── ProductCard.jsx
-     │    ├── Navbar.jsx
-     │    └── Loader.jsx
-     ├── Pages/
-     │    ├── Home.jsx
-     │    ├── ProductDetails.jsx
-     │    ├── AddProduct.jsx
-     │    └── EditProduct.jsx
-     ├── Context/
-     │    └── ProductContext.jsx
-     ├── App.js
-     └── index.js
 
 ### 🧹 Clean Code Practices
 
